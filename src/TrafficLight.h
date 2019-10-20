@@ -23,7 +23,7 @@ public:
 	T receive();
 
 private:
-	std::dequeue<TrafficLightPhase> _queue;
+	std::deque<T> _queue;
 	std::condition_variable _condition;
 	std::mutex _mutex;
 };
